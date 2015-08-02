@@ -60,7 +60,7 @@ $(document).ready(function() {
     var len = series.length;
     var diff = series[len-1] - series[len-2];
     for (var i = len-2; i > 0; i--) {
-      if (diff != series[i] - series[i-1] || diff < 0) {
+      if (diff != series[i] - series[i-1] || diff <= 0) {
         return false;
       }
       diff = series[i] - series[i-1];
