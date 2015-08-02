@@ -33,17 +33,17 @@ $(document).ready(function() {
 
         var nth_term = term1 + term2;
         $('#nth_term').text(nth_term);
-        smili('happy');
+        smiley('happy');
         highlightCells(A, D);
       }
       else {
         $('#nth_term').text('NONE');
-        smili('sad');
+        smiley('sad');
       }
     }
     else if (series.length <= 2) {
       $('#nth_term').text('NONE');
-      smili('poker');
+      smiley('poker');
     }
   }
   function filter_sinp() {
@@ -67,13 +67,13 @@ $(document).ready(function() {
     }
     return true;
   }
-  function smili(mood) {
+  function smiley(mood) {
     if (mood == 'happy')
-      $('#smili').text(': )')
+      $('#smiley').text(': )')
     else if (mood == 'sad')
-      $('#smili').text(': (');
+      $('#smiley').text(': (');
     else if (mood == 'poker')
-      $('#smili').text(': |');
+      $('#smiley').text(': |');
   }
   function highlightCells(A, D) {
     for (var i = A; i <= cells_limit; i += D) {
